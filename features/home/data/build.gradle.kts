@@ -23,7 +23,6 @@ dependencies {
     implementation(project(":core:domain"))
 
     // Room (>= 2.7.0)
-    // Etape 1 : ajouter les dépendances
     implementation("androidx.room:room-runtime:2.8.0")
     implementation("androidx.room:room-ktx:2.8.0")
     ksp("androidx.room:room-compiler:2.8.0")

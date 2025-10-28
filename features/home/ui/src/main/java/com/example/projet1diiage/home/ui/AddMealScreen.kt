@@ -25,7 +25,6 @@ fun AddMealScreen(
     navController: NavHostController,
     viewModel: AddMealViewModel = koinViewModel()
 ) {
-    val context = LocalContext.current
     val vibrate = rememberVibration()
     var title by remember { mutableStateOf("") }
     var currentIngredient by remember { mutableStateOf("") }
@@ -64,7 +63,7 @@ fun AddMealScreen(
                 if (title.isBlank() || ingredients.isEmpty()) {
                     showEmptyFieldsError = true
                 } else {
-                    vibrate(500)
+                    vibrate(500) // on va faire vibrer le téléphone pendant 500ms
                     viewModel.addMeal(
                         Meal(
                             title = title.trim(),
